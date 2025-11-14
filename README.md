@@ -9,30 +9,11 @@ This project solves the Traveling Salesman Problem (TSP) using a hybrid metaheur
 
 - Google OR-Tools (benchmark)
 
-The project uses your own Excel dataset containing a distance matrix between U.S. cities.
-
-📂 Project Structure
-📁 project/
-│── main.py / main.ipynb        # Main solver script
-│── data/
-│     └── distances.xlsx        # Your distance matrix (included in the repo)
-│── README.md                   # Documentation
 
 📊 Input Dataset
 
 The dataset included in the repository contains a precomputed distance matrix.
 Rows and columns represent city names, and each cell contains the distance between two cities.
-
-Example (extracted from your file)
-	Albuquerque, NM	Atlanta, GA	Austin, TX	Baltimore, MD	Boston, MA
-Albuquerque	0	1494	1330	1295	1838
-Atlanta	1494	0	2947	1175	2006
-Austin	1330	2947	0	2155	1785
-Baltimore	1295	1175	2155	0	579
-Boston	1838	2006	1785	579	0
-Charlotte	2369	389	1221	692	1951
-Chicago	666	2934	2813	1380	1004
-Requirements
 
 The first row must contain city names
 
