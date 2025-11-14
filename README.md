@@ -1,120 +1,124 @@
-# GA-TSP
+🚀 GA-TSP
 Hybrid Metaheuristics for the Traveling Salesman Problem (TSP)
 
-This project solves the Traveling Salesman Problem (TSP) using a hybrid metaheuristic approach based on:
+This project solves the Traveling Salesman Problem (TSP) using a hybrid metaheuristic approach combining:
 
-- Genetic Algorithm (GA)
+🧬 Genetic Algorithm (GA)
 
-- Tabu Search
+🔄 Tabu Search
 
-- Google OR-Tools (benchmark)
+⚙️ Google OR-Tools (benchmark solver)
 
+The goal is to compare metaheuristics and evaluate how hybridization improves solution quality and computational performance.
 
 📊 Input Dataset
 
-The dataset used in the repository contains a precomputed distance matrix.
-Rows and columns represent city names, and each cell contains the distance between two cities.
+The repository includes a precomputed distance matrix in Excel format.
 
-The first row must contain city names
+Rows = city names
 
-The first column must contain city names
+Columns = city names
 
-Internal values must be numeric distances
+Each cell = distance between two cities
 
-The matrix must be square (n × n)
+Matrix must be square (n × n)
 
-🚀 Features
+Distances must be numeric
+
+✔ No coordinate computation needed — distances are already provided.
+
+✨ Features
 
 ✔ Load a distance matrix directly from Excel
+
 ✔ Solve TSP using GA, Tabu Search, and Hybrid GA+Tabu
-✔ Compare metaheuristic solutions to OR-Tools reference solution
-✔ Extract best tour and total distance
-✔ Time performance measurements
+
+✔ Benchmark against Google OR-Tools
+
+✔ Extract the best route and total distance
+
+✔ Measure execution times for all algorithms
 
 🧠 Methodology
----- Genetic Algorithm (GA)
+🔹 1. Genetic Algorithm (GA)
 
-Performs global search through:
+Global search using:
 
--Selection
+Selection (roulette or tournament)
 
--Order Crossover (OX)
+Order Crossover (OX)
 
-- Mutation (swap, inversion)
+Mutation (swap / inversion)
 
-- Elitism
+Elitism
 
----- Tabu Search
+🔹 2. Tabu Search
 
-Improves solutions using:
+Local improvement using:
 
-- Neighborhood exploration (swap / 2-opt)
+Neighborhood moves (swap / 2-opt)
 
-- Tabu list
+Tabu list memory
 
-- Aspiration criteria
+Aspiration criteria to escape local minima
 
-- Stopping conditions (iteration limit or stagnation)
+Stop by iteration limit or stagnation
 
----- Hybrid GA + Tabu
+🔹 3. Hybrid GA + Tabu
 
 Each GA generation:
 
--Select current best route
+Select the current best route
 
-- Improve it using Tabu Search
+Improve it using Tabu Search
 
-- Inject improved route back into population
+Reinsert the improved individual into the population
 
-OR-Tools Benchmark
+This provides:
+GA = exploration
+Tabu = exploitation
 
-Used to:
-
-Validate performance
-
-Compare optimal distance vs heuristic results
-
-🧪 How to Run
-Install dependencies
+🔧 How to Run
+1️⃣ Install dependencies
 pip install numpy pandas openpyxl ortools
 
-Execute the script
+2️⃣ Run the program
 python main.py
 
 
-Or use the notebook version in Jupyter/Colab.
+Or open the notebook in Jupyter / Google Colab and execute all cells.
 
 📈 Outputs
 
 The solver reports:
 
-Best GA distance
+🧬 Best GA distance
 
-Best Tabu Search distance
+🔄 Best Tabu Search distance
 
-Best Hybrid distance
+🧬➕🔄 Best Hybrid distance
 
-OR-Tools reference solution
+⚙️ OR-Tools benchmark solution
 
-Execution time per algorithm
+⏱ Execution time for each algorithm
 
-Best tour (ordered sequence of cities)
+📍 Final optimized tour (sequence of cities)
 
 🎯 Purpose
 
-This project is designed for:
+This project is ideal for:
 
 Metaheuristics research
 
-TSP experimentation
+TSP and routing problem experimentation
 
-Operations research and optimization courses
+Operations Research and Optimization courses
 
-Benchmarking heuristic vs exact solvers
+Benchmarking heuristic vs. exact solvers
 
-It demonstrates how combining GA and Tabu Search can improve quality and convergence speed.
+It demonstrates how hybrid metaheuristics improve convergence and solution robustness.
 
 📜 License
 
-Released under the MIT License.
-Free to use, modify, and redistribute for academic or educational purposes.
+This project is released under the MIT License.
+You are free to use, modify, and distribute it for research or academic purposes.
