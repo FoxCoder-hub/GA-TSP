@@ -12,7 +12,7 @@ This project solves the Traveling Salesman Problem (TSP) using a hybrid metaheur
 
 📊 Input Dataset
 
-The dataset included in the repository contains a precomputed distance matrix.
+The dataset used in the repository contains a precomputed distance matrix.
 Rows and columns represent city names, and each cell contains the distance between two cities.
 
 The first row must contain city names
@@ -22,8 +22,6 @@ The first column must contain city names
 Internal values must be numeric distances
 
 The matrix must be square (n × n)
-
-➡️ No coordinate computation is required — distances are already provided.
 
 🚀 Features
 
