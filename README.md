@@ -78,16 +78,6 @@ This provides:
 GA = exploration
 Tabu = exploitation
 
-🔧 How to Run
-1️⃣ Install dependencies
-pip install numpy pandas openpyxl ortools
-
-2️⃣ Run the program
-python main.py
-
-
-Or open the notebook in Jupyter / Google Colab and execute all cells.
-
 📈 Outputs
 
 The solver reports:
